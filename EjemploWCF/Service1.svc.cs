@@ -12,6 +12,19 @@ namespace EjemploWCF
     // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Service1 : IService1
     {
+        public void EliminarUsuario(string user)
+        {
+            contextoDatosDataContext contexto = new contextoDatosDataContext();
+
+            List<Usuarios> usuario = (from r in contexto.Usuarios where r.NombreUsuario.Equals(user) select r).ToList();
+
+            if (usuario.Count > 0)
+            {
+                contexto.Usuarios.DeleteOnSubmit(usuario.FirstOrDefault());
+                contexto.SubmitChanges();
+            }
+        }
+
         public void InsertarUsuario(string user, string pass)
         {
             contextoDatosDataContext contexto = new contextoDatosDataContext();
