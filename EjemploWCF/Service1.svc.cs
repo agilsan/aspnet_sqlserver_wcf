@@ -12,22 +12,17 @@ namespace EjemploWCF
     // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        public List<Usuarios> ObtenerUsuarios()
         {
-            return string.Format("You entered: {0}", value);
+            contextoDatosDataContext contexto = new contextoDatosDataContext();
+            return (from r in contexto.Usuarios select r).ToList();
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public bool VerificarAcceso(string user, string pass)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            contextoDatosDataContext contexto = new contextoDatosDataContext();
+            
+            return (from r in contexto.Usuarios where r.NombreUsuario.Equals(user) && r.Pass.Equals(pass) select r).ToList().Count > 0 ? true : false;
         }
     }
 }
