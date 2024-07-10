@@ -1,0 +1,15 @@
+name: aspnet_sqlserver_wcf
+services:
+  aspnet_sqlserver_wcf:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: aspnet_sqlserver_wcf
+    environment:
+      SA_PASSWORD: "Form4P4ss!"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "9433:1433"
+    volumes:
+      - sqlserverformaciones:/var/opt/mssql
+
+volumes:
+  sqlserverformaciones:
