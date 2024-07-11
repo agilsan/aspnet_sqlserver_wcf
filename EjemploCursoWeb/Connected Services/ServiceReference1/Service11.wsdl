@@ -20,6 +20,12 @@
   <wsdl:message name="IService1_VerificarAcceso_OutputMessage">
     <wsdl:part name="parameters" element="tns:VerificarAccesoResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_VerificarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerificarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarUsuarioResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_InsertarUsuario_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertarUsuario" />
   </wsdl:message>
@@ -46,6 +52,10 @@
     <wsdl:operation name="VerificarAcceso">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/VerificarAcceso" message="tns:IService1_VerificarAcceso_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/VerificarAccesoResponse" message="tns:IService1_VerificarAcceso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/VerificarUsuario" message="tns:IService1_VerificarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/VerificarUsuarioResponse" message="tns:IService1_VerificarUsuario_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="InsertarUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertarUsuario" message="tns:IService1_InsertarUsuario_InputMessage" />

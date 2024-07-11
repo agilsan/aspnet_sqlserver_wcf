@@ -68,5 +68,12 @@ namespace EjemploWCF
             
             return (from r in contexto.Usuarios where r.NombreUsuario.Equals(user) && r.Pass.Equals(pass) select r).ToList().Count > 0;
         }
+
+        public bool VerificarUsuario(string user)
+        {
+            contextoDatosDataContext contexto = new contextoDatosDataContext();
+
+            return (from r in contexto.Usuarios where r.NombreUsuario.Equals(user) select r).ToList().Count > 0;
+        }
     }
 }

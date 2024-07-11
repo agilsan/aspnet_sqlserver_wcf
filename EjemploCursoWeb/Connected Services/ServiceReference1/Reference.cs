@@ -138,6 +138,12 @@ namespace EjemploCursoWeb.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/VerificarAcceso", ReplyAction="http://tempuri.org/IService1/VerificarAccesoResponse")]
         System.Threading.Tasks.Task<bool> VerificarAccesoAsync(string user, string pass);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/VerificarUsuario", ReplyAction="http://tempuri.org/IService1/VerificarUsuarioResponse")]
+        bool VerificarUsuario(string user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/VerificarUsuario", ReplyAction="http://tempuri.org/IService1/VerificarUsuarioResponse")]
+        System.Threading.Tasks.Task<bool> VerificarUsuarioAsync(string user);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertarUsuario", ReplyAction="http://tempuri.org/IService1/InsertarUsuarioResponse")]
         void InsertarUsuario(string user, string pass);
         
@@ -198,6 +204,14 @@ namespace EjemploCursoWeb.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> VerificarAccesoAsync(string user, string pass) {
             return base.Channel.VerificarAccesoAsync(user, pass);
+        }
+        
+        public bool VerificarUsuario(string user) {
+            return base.Channel.VerificarUsuario(user);
+        }
+        
+        public System.Threading.Tasks.Task<bool> VerificarUsuarioAsync(string user) {
+            return base.Channel.VerificarUsuarioAsync(user);
         }
         
         public void InsertarUsuario(string user, string pass) {

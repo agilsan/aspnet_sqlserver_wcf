@@ -11,7 +11,10 @@ namespace EjemploCursoWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ServiceReference1.Service1Client servicio = new Connection().NewConnection();
 
+            GridView1.DataSource = servicio.ObtenerUsuarios();
+            GridView1.DataBind();
         }
     }
 }

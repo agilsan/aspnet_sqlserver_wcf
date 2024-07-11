@@ -11,7 +11,7 @@ namespace EjemploCursoWeb
 {
 
 
-    public partial class LoginPage
+    public partial class SingUp
     {
 
         /// <summary>
@@ -42,13 +42,22 @@ namespace EjemploCursoWeb
         protected global::System.Web.UI.WebControls.TextBox txt_password;
 
         /// <summary>
-        /// Control btn_Login.
+        /// Control txt_password2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Login;
+        protected global::System.Web.UI.WebControls.TextBox txt_password2;
+
+        /// <summary>
+        /// Control btn_SignUp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_SignUp;
 
         /// <summary>
         /// Control btn_cancel.
@@ -58,14 +67,5 @@ namespace EjemploCursoWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_cancel;
-
-        /// <summary>
-        /// Control link_signup.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton link_signup;
     }
 }

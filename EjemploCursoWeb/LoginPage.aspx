@@ -15,11 +15,12 @@
                 <h3>Acceder al servicio</h3>
             </center>
             <label for="uname"><b>Usuario</b></label>
-            <asp:TextBox runat="server" ID="txt_Username" placeholder="Introduce el usuario"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txt_Username" placeholder="Introduce el usuario" />
             <label for="psw"><b>Contraseña</b></label>
-            <asp:TextBox runat="server" ID="txt_password" TextMode="Password" placeholder="Introduce la contraseña"></asp:TextBox>
-            <asp:Button runat="server" ID="btn_Login" CssClass="lgnbtn" Text="Acceder" OnClick="btn_Login_Click"></asp:Button>
-            <asp:Button runat="server" ID="btn_cancel" CssClass="cnbtn" Text="Cancelar"></asp:Button>
+            <asp:TextBox runat="server" ID="txt_password" TextMode="Password" placeholder="Introduce la contraseña" />
+            <asp:Button runat="server" ID="btn_Login" CssClass="lgnbtn" Text="Acceder" OnClick="btn_Login_Click" />
+            <asp:Button runat="server" ID="btn_cancel" CssClass="cnbtn" Text="Cancelar" />
+            <asp:LinkButton runat="server" ID="link_signup" Text="SignUp" OnClick="link_signup_Click" />
         </div>
     </form>
 </body>
